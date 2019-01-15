@@ -1,0 +1,50 @@
+[
+  {
+    "model": "core.customer",
+    "pk": "01cd841c-3b9f-4520-b1f5-b2ec5c5ef276",
+    "fields": {
+      "date_modified": "2019-01-12T22:42:21.406Z",
+      "date_created": "2019-01-12T22:28:29.188Z",
+      "first_name": "Kevin",
+      "last_name": "Macharia",
+      "salutation": "Mr",
+      "phone_number": "254717072416",
+      "gender": "Male",
+      "date_of_birth": "2013-04-08",
+      "email": "kelvinmacharia078@gmail.com",
+      "state": "47dbd942-32bd-4197-9478-695b5163df76"
+    }
+  },
+  {
+    "model": "core.customer",
+    "pk": "cd4f7352-64f3-4eea-9f6b-ee202c3e0220",
+    "fields": {
+      "date_modified": "2019-01-13T00:53:29.044Z",
+      "date_created": "2019-01-13T00:53:29.044Z",
+      "first_name": "John",
+      "last_name": "Doe",
+      "salutation": "Mr",
+      "phone_number": "0717072416",
+      "gender": "Male",
+      "date_of_birth": "1994-12-31",
+      "email": "john.doe@kev.com",
+      "state": "47dbd942-32bd-4197-9478-695b5163df76"
+    }
+  },
+  {
+    "model": "core.customer",
+    "pk": "e7c4069e-1abf-4d7e-82fe-9e374f6f96d5",
+    "fields": {
+      "date_modified": "2019-01-12T22:42:07.214Z",
+      "date_created": "2019-01-12T22:29:39.937Z",
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "salutation": "Mrs",
+      "phone_number": "25470000000",
+      "gender": "Female",
+      "date_of_birth": "2019-01-21",
+      "email": "jane.smith@kev.com",
+      "state": "47dbd942-32bd-4197-9478-695b5163df76"
+    }
+  }
+]

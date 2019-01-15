@@ -1,0 +1,38 @@
+[
+  {
+    "model": "core.risktype",
+    "pk": "1af7c3f2-553a-4dfa-a88b-da6aa8b8821d",
+    "fields": {
+      "date_modified": "2018-12-23T08:15:31.375Z",
+      "date_created": "2018-12-23T08:15:31.375Z",
+      "name": "House Cover",
+      "description": "Covers all building properties",
+      "state": "47dbd942-32bd-4197-9478-695b5163df76",
+      "has_form": false
+    }
+  },
+  {
+    "model": "core.risktype",
+    "pk": "2bfa3fc1-9d2a-46f1-ad91-86a588cf19ea",
+    "fields": {
+      "date_modified": "2019-01-12T17:51:20.317Z",
+      "date_created": "2019-01-11T12:56:22.655Z",
+      "name": "Life Assurance",
+      "description": "Cover for life, paid to next of kin if the client dies in the term of this policy.",
+      "state": "47dbd942-32bd-4197-9478-695b5163df76",
+      "has_form": false
+    }
+  },
+  {
+    "model": "core.risktype",
+    "pk": "d39421ad-e3ee-4194-893c-2db45e596124",
+    "fields": {
+      "date_modified": "2019-01-12T21:16:15.445Z",
+      "date_created": "2018-12-23T07:54:55.844Z",
+      "name": "AutoMobile Cover",
+      "description": "Insurance cover for all vehicles",
+      "state": "47dbd942-32bd-4197-9478-695b5163df76",
+      "has_form": false
+    }
+  }
+]
