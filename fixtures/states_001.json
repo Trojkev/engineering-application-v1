@@ -1,0 +1,22 @@
+[
+  {
+    "model": "base.state",
+    "pk": "47dbd942-32bd-4197-9478-695b5163df76",
+    "fields": {
+      "date_modified": "2019-01-15T05:21:39.865Z",
+      "date_created": "2018-12-23T07:54:52.407Z",
+      "name": "Active",
+      "description": "Used to mark a record as ready to transact in the db"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "b18ae4c4-b050-4f41-9c1c-ccae993e0806",
+    "fields": {
+      "date_modified": "2019-01-15T05:21:07.843Z",
+      "date_created": "2019-01-15T05:21:07.843Z",
+      "name": "Deleted",
+      "description": "Used when we soft delete a record from the db"
+    }
+  }
+]
