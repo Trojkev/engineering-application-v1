@@ -3,5 +3,6 @@ mixer==6.0.1
 pytz==2018.3
 django_heroku==0.3.1
 Django==1.11.10
+django-cors-headers
 djangorestframework==3.9.1
 gunicorn
