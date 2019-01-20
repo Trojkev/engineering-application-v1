@@ -15,5 +15,4 @@ htmlcov
 .coverage
 *.coverage
 *.pytest_cache/*
-manage.py
 britecore_engineering_appication/*
