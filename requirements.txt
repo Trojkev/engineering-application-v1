@@ -6,3 +6,4 @@ Django==1.11.10
 django-cors-headers
 djangorestframework==3.9.1
 gunicorn
+psycopg2-binary
