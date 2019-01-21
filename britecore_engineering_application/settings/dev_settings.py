@@ -3,6 +3,8 @@
 development settings for this project
 	- should be disabled in production
 """
+import dj_database_url
+
 from .base import *
 
 # Database
@@ -14,3 +16,5 @@ DATABASES = {
 		'NAME': os.path.join(BASE_DIR, '../db.sqlite3'),
 	}
 }
+
+DATABASES['default'] = dj_database_url.config(default=config('DATABASE_URL'))
