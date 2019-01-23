@@ -16,3 +16,4 @@ htmlcov
 *.coverage
 *.pytest_cache/*
 britecore_engineering_appication/*
+venv/*

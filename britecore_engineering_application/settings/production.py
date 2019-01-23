@@ -8,7 +8,7 @@ import dj_database_url
 
 ENVIRONMENT = 'production'
 DEBUG = False
-ALLOWED_HOSTS = ['']
+ALLOWED_HOSTS = ['*']
 
 DATABASES = {
     'default': dj_database_url.config(default=config('DATABASE_URL'))

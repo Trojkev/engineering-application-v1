@@ -22,12 +22,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'hz+s0c951-#r#_qc2(uk%_j36@xt3y+(^j0f9lbm7zsun(+==f'
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'hz+s0c951-#r#_qc2(uk%_j36@xt3y+(^j0f9lbm7zsun(+==f'
+# SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = True
+# DEBUG = config('DEBUG', default=False)
 
 ALLOWED_HOSTS = []
 
@@ -116,57 +116,56 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 # VENV_ROOT = '/opt/logs/britecore_engineering_application'
-#
-# LOGGING = {
-# 	'version': 1,
-# 	'disable_existing_loggers': False,
-# 	'formatters': {
-# 		'verbose': {
-# 			'format': '%(asctime)s-%(name)s %(module)s %(process)d %(thread)d-(%(threadName)-2s) %(levelname)s-%(message)s'
-# 		},
-# 		'simple': {
-# 			'format': '%(levelname)s %(message)s'
-# 		},
-# 	},
-# 	'filters': {
-# 		'special': {
-# 			'()': 'django.utils.log.RequireDebugFalse',
-# 		}
-# 	},
-# 	'handlers': {
-# 		'rotating_file': {
-# 			'level': 'INFO',
-# 			'formatter': 'verbose',
-# 			'class': 'logging.handlers.TimedRotatingFileHandler',
-# 			'filename': os.path.join(VENV_ROOT, '', 'britecore_engineering_application.log'),  # full path works
-# 			'when': 'midnight',
-# 			'interval': 1,
-# 			'backupCount': 7,
-# 		},
-# 	},
-# 	'loggers': {
-# 		'api': {
-# 			'handlers': ['rotating_file'],
-# 			'level': 'INFO',
-# 		},
-# 		'base': {
-# 			'handlers': ['rotating_file'],
-# 			'level': 'INFO',
-# 		},
-# 		'core': {
-# 			'handlers': ['rotating_file'],
-# 			'level': 'INFO',
-# 		},
-# 		'britecore_engineering_application': {
-# 			'handlers': ['rotating_file'],
-# 			'level': 'INFO',
-# 		}
-# 	},
-# }
+VENV_ROOT = os.path.join(BASE_DIR, 'logs')
+
+LOGGING = {
+	'version': 1,
+	'disable_existing_loggers': False,
+	'formatters': {
+		'verbose': {
+			'format': '%(asctime)s-%(name)s %(module)s %(process)d %(thread)d-(%(threadName)-2s) %(levelname)s-%(message)s'
+		},
+		'simple': {
+			'format': '%(levelname)s %(message)s'
+		},
+	},
+	'filters': {
+		'special': {
+			'()': 'django.utils.log.RequireDebugFalse',
+		}
+	},
+	'handlers': {
+		'rotating_file': {
+			'level': 'INFO',
+			'formatter': 'verbose',
+			'class': 'logging.handlers.TimedRotatingFileHandler',
+			'filename': os.path.join(VENV_ROOT, '', 'britecore_engineering_application.log'),  # full path works
+			'when': 'midnight',
+			'interval': 1,
+			'backupCount': 7,
+		},
+	},
+	'loggers': {
+		'api': {
+			'handlers': ['rotating_file'],
+			'level': 'INFO',
+		},
+		'base': {
+			'handlers': ['rotating_file'],
+			'level': 'INFO',
+		},
+		'core': {
+			'handlers': ['rotating_file'],
+			'level': 'INFO',
+		},
+		'britecore_engineering_application': {
+			'handlers': ['rotating_file'],
+			'level': 'INFO',
+		}
+	},
+}
 
 django_heroku.settings(locals())
