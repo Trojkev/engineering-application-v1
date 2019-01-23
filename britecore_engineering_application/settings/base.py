@@ -26,7 +26,7 @@ SECRET_KEY = 'hz+s0c951-#r#_qc2(uk%_j36@xt3y+(^j0f9lbm7zsun(+==f'
 # SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+DEBUG = True
 # DEBUG = config('DEBUG', default=False)
 
 ALLOWED_HOSTS = []
