@@ -7,7 +7,7 @@ from .base import *
 import dj_database_url
 
 ENVIRONMENT = 'production'
-DEBUG = False
+DEBUG = config('DEBUG')
 ALLOWED_HOSTS = ['*']
 
 DATABASES = {
