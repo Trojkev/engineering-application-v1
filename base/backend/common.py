@@ -14,6 +14,8 @@ from decimal import Decimal
 
 from django.http import QueryDict, JsonResponse
 from django.db.models import Q
+from django.conf import settings
+from django.core.files.storage import FileSystemStorage
 
 from pytz import timezone
 
@@ -334,3 +336,12 @@ def download_content_type(extension = None):
 	except Exception as e:
 		lgr.exception('download_content_type Exception: %s', e)
 	return None
+
+
+def downloads_storage():
+	"""
+	Provides the downloads config for uploaded content.
+	@return: The download config storage.
+	@rtype: FileSystemStorage
+	"""
+	return FileSystemStorage(location = '%s/%s' % (settings.FILE_CONTENT_ROOT, 'downloads'), base_url = '/downloads')
