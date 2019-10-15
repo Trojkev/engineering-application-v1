@@ -284,3 +284,53 @@ def json_super_serializer(obj):
 	elif isinstance(obj, timedelta):
 		return obj.days
 	return str(obj)
+
+
+def download_content_type(extension = None):
+	"""
+	Provides the content type for files that need to be downloaded.
+	@param extension: The extension to return its content type if any. If None, we return the whole content type dict.
+	@type extension: str | None
+	@return: The string representing the content type or dict containing all the supported content types.
+	@rtype: str | dict | None
+	"""
+	try:
+		lookups = {
+			'javascript': 'application/javascript',
+			'json': 'application/json',
+			'x-www-form-urlencoded': 'application/x-www-form-urlencoded',
+			'app-xml': 'application/xml',
+			'zip': 'application/zip',
+			'pdf': 'application/pdf',
+			'sql': 'application/sql',
+			'graphql': 'application/graphql',
+			'ld+json': 'application/ld+json',
+			'doc': 'application/msword',
+			'docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+			'xls': 'application/vnd.ms-excel',
+			'xlsx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+			'ppt': 'application/vnd.ms-powerpoint',
+			'pptx': 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+			'odt': 'application/vnd.oasis.opendocument.text',
+			'mpeg': 'audio/mpeg',
+			'ogg': 'audio/ogg',
+			'multipart': 'multipart/form-data',
+			'css': 'text/css',
+			'html': 'text/html',
+			'xml': 'text/xml',
+			'csv': 'text/csv',
+			'plain': 'text/plain',
+			'png': 'image/png',
+			'ief': 'image/ief',
+			'jpeg': 'image/jpeg',
+			'jpg': 'image/jpg',
+			'tiff': 'image/tiff',
+			'gif': 'image/gif',
+			'g3fax': 'image/g3fax'
+		}
+		if extension:
+			return lookups.get(extension, None)
+		return lookups
+	except Exception as e:
+		lgr.exception('download_content_type Exception: %s', e)
+	return None
