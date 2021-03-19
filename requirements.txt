@@ -5,7 +5,7 @@ dj-database-url==0.5.0
 Django==2.1.5
 django-cors-headers==2.4.0
 django-heroku==0.3.1
-djangorestframework==3.9.1
+djangorestframework==3.11.2
 Faker==0.9.1
 gunicorn==19.9.0
 mixer==6.1.3
